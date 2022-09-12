@@ -20,12 +20,12 @@ public class SearchController {
     @Autowired
     private SearchService searchService;
 
-    @GetMapping("/search")
+    @GetMapping("/api/search")
     public Tuple2<List<Data>, Integer> search(@RequestParam("keyword") String searchInfo, @RequestParam("pageNum") int pageNum) {
         return searchService.search(searchInfo, resultNumInOnePage, pageNum);
     }
 
-    @GetMapping("/relative_segments")
+    @GetMapping("/api/relative_segments")
     public List<String> getRelativeSegments(@RequestParam("word") String searchInfo) {
         Trie trie = LoadSegment.trie;
         return trie.getRelatedWords(searchInfo);

@@ -9,7 +9,9 @@ const Search = ({ className, keyword }) => {
   const history = useHistory()
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8081/relative_segments?word=${query}`)
+    fetch(
+      `https://app3233.acapp.acwing.com.cn/api/relative_segments?word=${query}`,
+    )
       .then((resp) => resp.json())
       .then((json) => {
         if (query === '') setTopRelativeSegments([])

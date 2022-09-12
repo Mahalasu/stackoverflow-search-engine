@@ -11,7 +11,7 @@ import {
   Stack,
 } from '@mui/material'
 import { ThumbUp, Visibility } from '@mui/icons-material'
-import { useHistory, useLocation } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
 
 import { useGetResultsQuery } from '../../api'
 import smallLogo from '../../image/small_logo.png'
@@ -56,9 +56,9 @@ const ResultDisplay = () => {
   return (
     <>
       <div>
-        <a href="http://127.0.0.1:3000">
+        <Link to="/">
           <img className={classes.logo} src={smallLogo} alt="logo" />
-        </a>
+        </Link>
         <Search keyword={keyword} className={classes.search} />
       </div>
       {data._1.map((d, idx) => (
