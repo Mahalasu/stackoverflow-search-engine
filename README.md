@@ -8,7 +8,7 @@ Stackoverflow search engine is a simplified and self-used search engine. You can
 
 used Trie to realize the auto-suggestions on searching
 
-![results](/Users/gaoshangdai/Desktop/search-engine/pictures/results.png)
+![results](./pictures/results.png)
 
 ![results2](./pictures/results2.png)display the results after searching
 
